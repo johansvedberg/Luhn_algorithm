@@ -8,9 +8,9 @@ public class Luhn {
 
 	public void CheckCardNbrs() {
 
-		String answer;
 		Scanner inFile = null;
 		String ccNbr = null;
+
 		try {
 			inFile = new Scanner(new FileReader("ccnbrs.txt"));
 
@@ -21,7 +21,6 @@ public class Luhn {
 
 		while (inFile.hasNext()) {
 			ccNbr = inFile.next();
-
 			int sum = 0;
 			boolean doubleValue = false;
 
