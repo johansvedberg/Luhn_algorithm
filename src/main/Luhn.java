@@ -10,7 +10,7 @@ public class Luhn {
 
 		String answer;
 		Scanner inFile = null;
-		String ccNumber = null;
+		String ccNbr = null;
 		try {
 			inFile = new Scanner(new FileReader("ccnbrs.txt"));
 
@@ -20,16 +20,16 @@ public class Luhn {
 		}
 
 		while (inFile.hasNext()) {
-			ccNumber = inFile.next();
+			ccNbr = inFile.next();
 
 			int sum = 0;
 			boolean doubleValue = false;
 
 			for (int j = 0; j <= 9; j++) {
 				sum = 0;
-				for (int i = ccNumber.length() - 1; i >= 0; i--) {
+				for (int i = ccNbr.length() - 1; i >= 0; i--) {
 
-					String current = ccNumber.substring(i, i + 1);
+					String current = ccNbr.substring(i, i + 1);
 					int n;
 					if (current.equals("X")) {
 
